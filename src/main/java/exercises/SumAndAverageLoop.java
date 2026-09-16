@@ -1,11 +1,10 @@
 //conversation exercise class 2
-//Exercise 1.1
+//Exercise 1.1 Loops
 package exercises;
 
-import java.sql.SQLOutput; //not sure what is does. put in automatically
 import java.util.Scanner; //scanner being inputted
 
-public class ConversationExercise_Q1 { //creating class
+public class SumAndAverageLoop { //creating class
     static void main (){
         Scanner input = new Scanner(System.in); //only need this Scanner line once per file. it allows us to access the terminal
         int target =-1; //target user has to guess
@@ -17,7 +16,7 @@ public class ConversationExercise_Q1 { //creating class
             System.out.println("Guess the number!");
             guess = input.nextInt();//changing the guess amount to the amount the user has entered.
 
-            if(guess ==target){ //if statements. if the user did guess -1 this will happen
+            if(guess == target){ //if statements. if the user did guess -1 this will happen
                 System.out.println("Well Done, that's correct!"); //this will inform the user they are correct
                 System.out.println("Here is your Sum of numbers entered " + sum); //this will show the user the sum of their guesses.
                 average = sum / averageNumbers; //this is maths for their average the sum of their guesses divided by amount of guesses they made.
