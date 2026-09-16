@@ -1,8 +1,7 @@
 //conversation exercise class 2
 //sample
-package exercises;
+package in_class;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class ConversationExercise {
