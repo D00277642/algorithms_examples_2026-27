@@ -1,7 +1,7 @@
 //conversation exercise class 2
 //Exercise 2.1 Loops
 
-package exercises;
+package exercises.conversion;
 
 import java.util.Scanner;
 
