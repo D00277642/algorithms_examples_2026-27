@@ -1,23 +1,25 @@
 package in_class;
 
 import utils.ArrayUtils;
+import java.util.Random;
 
 public class TestDisplayArrays {
     static void main(String[] args) {
         int[] nums = new int[10];
+        Random rg = new Random();
 
         for (int i = 0; i < nums.length; i++) {
-            nums[i] = i * 10;
+            nums[i] = rg.nextInt(100);
         }
 
         ArrayUtils.displayArray(nums);
         System.out.println("------------------");
-        String [] text = new String[10];
-
-        for (int i = 0; i < text.length; i++) {
-            text[i] = ""+i;
+        int target = 70;
+        int index = ArrayUtils.indexOf(nums, target);
+        if(index != -1) {
+            System.out.println(target + " found at index " + index);
+        }else{
+            System.out.println(target + " not found.");
         }
-        ArrayUtils.displayArray(text);
-
     }
 }
