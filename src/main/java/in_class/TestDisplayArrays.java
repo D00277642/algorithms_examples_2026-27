@@ -21,5 +21,9 @@ public class TestDisplayArrays {
         }else{
             System.out.println(target + " not found.");
         }
+
+        System.out.println("------------------");
+        String[] names = {"Katie", "Jo", "Dan", "Alan", "Noah"};
+        ArrayUtils.displayArray(names);
     }
 }

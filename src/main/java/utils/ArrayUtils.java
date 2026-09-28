@@ -13,6 +13,12 @@ public class ArrayUtils {
         }
     }
 
+    public static void displayArray(String[] data) {
+        for (int i = 0; i < data.length; i++) {
+            System.out.println(i + ") " + data[i]);
+        }
+    }
+
     public static int indexOf(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] == target) {
