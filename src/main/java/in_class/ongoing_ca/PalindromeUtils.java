@@ -27,9 +27,42 @@ public class PalindromeUtils {
         return cleaned.equals(reversed);
     }
 
+    /**
+     * Checks if a string is a palindrome using two pointers.
+     *
+     * @param text the string to check
+     * @return true if it is a palindrome, otherwise false
+     */
+    public static boolean checkPalindromeTwoPointer(String text) {
+        String cleaned = "";
+        for (int i = 0; i < text.length(); i++) {
+            char c = text.charAt(i);
+
+            if (Character.isLetterOrDigit(c)) {
+                c = Character.toLowerCase(c);
+                cleaned = cleaned + c;
+            }
+        }
+        int left = 0;
+        int right = cleaned.length() - 1;
+
+        while (left < right) {
+            if (cleaned.charAt(left) != cleaned.charAt(right)) {
+                return false;
+            }
+
+            left++;
+            right--;
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
         System.out.println(checkPalindromeBruteForce("racecar"));
         System.out.println(checkPalindromeBruteForce("Kayak"));
         System.out.println(checkPalindromeBruteForce("Katie"));
+        System.out.println(checkPalindromeTwoPointer("racecar"));
+        System.out.println(checkPalindromeTwoPointer("I want a racecar"));
+        System.out.println(checkPalindromeTwoPointer("A person: level"));
     }
 }
