@@ -19,5 +19,17 @@ public class PalindromeUtils {
                 cleaned = cleaned + c;
             }
         }
+        String reversed = "";
+
+        for (int i = cleaned.length() - 1; i >= 0; i--) {
+            reversed = reversed + cleaned.charAt(i);
+        }
+        return cleaned.equals(reversed);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(checkPalindromeBruteForce("racecar"));
+        System.out.println(checkPalindromeBruteForce("Kayak"));
+        System.out.println(checkPalindromeBruteForce("Katie"));
     }
 }
