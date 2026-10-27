@@ -5,8 +5,8 @@ public class ArrayUtils {
         if (a.length != b.length) {
             return false;
         }
+        boolean[] matched = new boolean[b.length];
         for (int i = 0; i < a.length; i++) {
-            System.out.println(a[i]);
         }
         return true;
     }
