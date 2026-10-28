@@ -1,0 +1,30 @@
+Contraindications
+
+Problem 1: Array Equality
+equalArraysBruteForce
+This method can be slow with large arrays because it checks for matches using nested loops.
+
+equalArraysTwoPointer
+This method sorts copies of the arrays first, so it may be slower for small arrays. It needs extra memory to store the copies.
+
+Problem 2: Palindrome
+checkPalindromeBruteForce
+This method can use more memory because it creates extra strings. It may not be the best choice for very long strings.
+
+checkPalindromeTwoPointer
+This method creates an extra string before checking the charcters. This can make it slower and use more memory for long strings.
+
+Problem 3: shortest subarray
+shortestSubarrayBruteForce
+This method can be slow for large arrays because it checks lots of possible subarrays.
+
+shortestSubarrayTwoPointer
+This method works with positive numbers. It might not work right if the array contains negative numbers.
+
+PRoblem 4: Reverse vowels
+reverseVowelsBruteForce
+This method creates extra strings, so it can use more memory and be slower for long strings.
+
+reverseVowelsTwoPointer
+This method only checks a, e, i, o and u as vowels. It also needs extra memory to create the character array.
+
