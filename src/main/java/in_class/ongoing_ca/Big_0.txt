@@ -1,0 +1,64 @@
+Big O Time and Space Complexity
+
+Problem 1: Array Equality
+equalArraysBruteForce
+O(n2)
+The outer loop checks each element in array a and the inner loop checks array b to find a match. In the worst case, it could check every element against other elements.
+
+O(n)
+The method creates a matched array to keep track of which elements have already been used.
+
+equalArraysTwoPointer
+O(n log n)
+The method copies and sorts both arrays before comparing them. Sorting takes the most time, so the overall time is O(n log n).
+
+O(n)
+The method makes 2 copies of the arrays, it needs extra space depending on it's size.
+
+
+Problem 2: Palindrome
+checkPalindromeBruteForce
+O(n2)
+The method cleans and reverses the string. Adding characters to strings each time makes it slower for longer strings.
+
+O(n)
+The method creates extra strings to store the cleaned and reversed text.
+
+checkPalindromeTwoPointer
+O(n2)
+The method cleans the string first and then uses two pointers to compare the characters. Building the cleaned string takes the most time.
+
+O(n)
+The method creates an extra string to store the cleaned text.
+
+
+Problem 3: Shortest Subarray
+shortestSubarrayBruteForce
+O(n2)
+The method checks different subarrays to find the shortest one with a sum that reaches the target.
+
+O(1)
+It uses a fixed number of variables to keep track of the sum and positions.
+
+shortestSubarrayTwoPointer
+O(n)
+The 2 pointers move through the array to find the shortest subarray. This works because the numbers are positive.
+
+O(1)
+It uses a fixed number of variables to track the pointers, sum and result.
+
+
+Problem 4: Reverse Vowels
+reverseVowelsBruteForce
+O(n2)
+The method collects the vowels, reverses them and builds the result. Repeated strings makes it slower.
+
+O(n)
+It creates extra strings to store the vowels and the final result.
+
+reverseVowelsTwoPointer
+O(n)
+The two pointers look for vowels from each end and swap them until they meet.
+
+O(n)
+The method creates a character array to work with the string.
