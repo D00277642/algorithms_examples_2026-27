@@ -39,8 +39,46 @@ public class StringUtils {
         }
         return result;
     }
+
+    /**
+     * Reverses the vowels using two pointers.
+     *
+     * @param text the string to change
+     * @return the string with its vowels reversed
+     */
+    public static String reverseVowelsTwoPointer(String text) {
+        char[] letters = text.toCharArray();
+        int left = 0;
+        int right = letters.length - 1;
+
+        while (left < right) {
+            char c = Character.toLowerCase(letters[left]);
+            if (c != 'a' && c != 'e' && c != 'i' &&
+                    c != 'o' && c != 'u') {
+                left++;
+                continue;
+            }
+
+            c = Character.toLowerCase(letters[right]);
+            if (c != 'a' && c != 'e' && c != 'i' &&
+                    c != 'o' && c != 'u') {
+                right--;
+                continue;
+            }
+
+            char temp = letters[left];
+            letters[left] = letters[right];
+            letters[right] = temp;
+            left++;
+            right--;
+        }
+        return new String(letters);
+    }
+
     public static void main(String[] args) {
         System.out.println(StringUtils.reverseVowelsBruteForce("hello"));
         System.out.println(StringUtils.reverseVowelsBruteForce("Katie"));
+        System.out.println(StringUtils.reverseVowelsTwoPointer("hello"));
+        System.out.println(StringUtils.reverseVowelsTwoPointer("Katie"));
     }
 }
